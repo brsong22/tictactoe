@@ -183,6 +183,19 @@ public class TicTacToe {
 		else{
 			checkList = computerMoves;
 		}
+		/* check verticals & horizontals */
+		if(gridSpace == 4 ||
+				gridSpace == 1 || gridSpace == 3 || gridSpace == 5 || gridSpace == 7){
+			if((checkList.contains(0) && checkList.contains(3) && checkList.contains(6)) || 
+					(checkList.contains(1) && checkList.contains(4) && checkList.contains(7)) || 
+					(checkList.contains(2) && checkList.contains(5) && checkList.contains(8)) ||
+					(checkList.contains(0) && checkList.contains(3) && checkList.contains(6)) || 
+					(checkList.contains(1) && checkList.contains(4) && checkList.contains(7)) || 
+					(checkList.contains(2) && checkList.contains(5) && checkList.contains(8))){
+				won = true;
+				return won;
+			}
+		}
 		/* check verticals */
 		if(gridSpace == 4 ||
 				gridSpace == 0 || gridSpace == 1 || gridSpace == 2 || 
